@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <title>Car repair</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -186,7 +190,7 @@
         <div class="wrapper">
           <div class="block">
             <div class="process__item">
-              <h4 class="info__title">1.Request your quote</h4>
+              <h4 class="info__title">01.Request your quote</h4>
               <p class="info__text">We will be there when you most need us</p>
             </div>
           </div>
@@ -207,30 +211,75 @@
       <!-- container -->
     </section>
     <!-- section Process -->
-    <section class="contats">
+    <section class="contacts">
       <div class="container">
-        <h2 class="block__title">Contact us</h2>
-        <form action="" class="contacts__form">
+        <h2 class="block__title text-white">Contact us</h2>
+        <form class="contacts__form" action="">
           <div class="form__row">
             <div class="form__group">
-              <input type="text" class="input" />
+              <input type="text" class="input" placeholder=" " />
+              <!-- ничего не ставить между input и label для работы подлёта -->
               <label for="" class="label">Name</label>
+              <!-- label написан после input для работы подлёта при клике -->
             </div>
-            <div class="form__group"></div>
-            <input type="text" class="input" />
-            <label for="" class="label">Last name</label>
+            <div class="form__group">
+              <input type="text" class="input" placeholder=" " />
+              <label for="" class="label">Last name</label>
+            </div>
           </div>
           <div class="form__row">
             <div class="form__group">
-              <input type="email" class="input" />
+              <input type="email" class="input" placeholder=" " />
               <label for="" class="label">Email</label>
             </div>
-            <div class="form__group"></div>
-            <input type="tel" class="input" />
-            <label for="" class="label">Phone</label>
+            <div class="form__group">
+              <input type="text" class="input" placeholder=" " />
+              <label for="" class="label">Phone</label>
+            </div>
           </div>
+          <div class="form__row">
+            <div class="form__group">
+              <textarea class="textarea" placeholder=" " name=""></textarea>
+              <label for="" class="label">Message</label>
+            </div>
+          </div>
+          <button class="btn text-upper" type="submit">Send</button>
         </form>
+        <!-- /.contact__form -->
       </div>
+      <!-- /.container -->
     </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <p class="copyright">
+            © 2022 Study project completed by Maxim Zaitsev
+          </p>
+          <div class="footer__soc">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              class="footer__soc-link"
+            >
+              <img src="img/linkedin.png" alt="" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="footer__soc-link"
+            >
+              <img src="img/instagram.svg" alt="" />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="footer__soc-link"
+            >
+              <img src="img/facebook.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

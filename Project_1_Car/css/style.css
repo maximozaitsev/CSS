@@ -26,7 +26,9 @@ p {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -43,6 +45,9 @@ p {
   min-width: 200px;
   padding: 0 15px;
   transition: background-color 0.2 ease;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
 }
 
 .btn:hover {
@@ -262,6 +267,10 @@ p {
   padding: 0 10px;
 }
 
+.text-upper {
+  text-transform: uppercase;
+}
+
 /* Block end */
 
 /* Services start */
@@ -423,6 +432,121 @@ p {
 /* Contacts start */
 
 .contacts {
+  padding: 100px 0;
+  background-color: #171616;
 }
 
+.contacts .block__title {
+  margin-bottom: 40px;
+}
+
+.contacts__form {
+  max-width: 440px;
+}
+
+.form__row {
+  margin: 0 -20px;
+  display: flex;
+}
+
+.form__group {
+  margin-bottom: 30px;
+  padding: 0 20px;
+  flex: 1;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 9px 0;
+  outline: 0; /*убрать рамку при наведении на поле ввода*/
+  border: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  border-bottom: 1px solid #fff; /*сплошная белая граница*/
+  background-color: transparent;
+}
+
+.input:focus + .label {
+  transform: translateY(-15px); /*подлет лейбла при клике*/
+  font-size: 12px; /*уменьшение лейбла с 15 до 12 px при клике*/
+}
+
+input:not(:placeholder-shown) + .label {
+  /*чтобы лейбл не возвращался при отводе фокуса*/
+  transform: translateY(-15px);
+  font-size: 12px;
+}
+
+.label {
+  letter-spacing: 0.15em;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  pointer-events: none; /*для пробуска клика через лейбл*/
+  transition: all 0.2s ease; /*анимация при изменинии размера*/
+}
+
+.textarea {
+  /*стили .инпута*/
+  min-height: 130px;
+  width: 100%;
+  padding: 9px 0;
+  resize: vertical;
+  outline: 0; /*убрать рамку при наведении на поле ввода*/
+  border: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  border-bottom: 1px solid #fff; /*сплошная белая граница*/
+  background-color: transparent;
+}
+
+.textarea:focus + .label {
+  transform: translateY(-15px); /*подлет лейбла при клике*/
+  font-size: 12px; /*уменьшение лейбла с 15 до 12 px при клике*/
+}
+
+.textarea:not(:placeholder-shown) + .label {
+  /*чтобы лейбл не возвращался при отводе фокуса*/
+  transform: translateY(-15px);
+  font-size: 12px;
+}
 /* Contacts end */
+
+/* Footer start */
+
+.footer {
+}
+
+.footer__wrapper {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  letter-spacing: 00.15em;
+}
+
+.footer__soc {
+  display: flex;
+  text-decoration: none;
+}
+
+.footer__soc-link {
+  margin-right: 20px;
+}
+
+.footer__soc-link:last-child {
+  margin-right: 0;
+}
+
+.footer__soc-link img {
+  height: 25px;
+}
+
+/* Footer end */
